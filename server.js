@@ -12,10 +12,17 @@ app.get("/", function(req, res) {
 });
 
 app.get("/cat", function(req, res) {
+  console.log(__dirname);
+
   axios
     .get("http://thecatapi.com/api/images/get")
     .then(data => res.send(data.request.res.responseUrl))
     .catch(err => console.log(err));
 });
 
-app.listen(process.env.PORT || 3000);
+// Anything that doesn't match the above, send back index.html
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname + "/client/build/index.html"));
+});
+
+app.listen(process.env.PORT || 8080);
