@@ -27,7 +27,10 @@ class Cat extends Component {
   getCat() {
     axios
       .get("/cat")
-      .then(data => this.setState({ url: data.data }))
+      .then(data => {
+        console.log(data.data);
+        return this.setState({ url: data.data });
+      })
       .catch(data => console.log(data));
   }
 
@@ -43,4 +46,3 @@ class Cat extends Component {
 }
 
 export default Cat;
-

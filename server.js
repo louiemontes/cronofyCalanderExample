@@ -18,4 +18,4 @@ app.get("/cat", function(req, res) {
     .catch(err => console.log(err));
 });
 
-app.listen(process.env.PORT || 8080);
+app.listen(process.env.PORT || 3000);
