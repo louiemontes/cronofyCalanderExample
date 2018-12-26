@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import Cat from "./Cat";
 
 class App extends Component {
   render() {
@@ -18,6 +19,7 @@ class App extends Component {
             target="_blank"
             rel="noopener noreferrer"
           >
+            <Cat />
             Learn React
           </a>
         </header>
