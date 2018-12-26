@@ -2,7 +2,6 @@ const axios = require("axios");
 const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
-const btoa = require("btoa");
 
 const app = express();
 
